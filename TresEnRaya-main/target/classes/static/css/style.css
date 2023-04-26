@@ -95,3 +95,18 @@ body {
 .scoreBoard span.active {
     border-bottom: 4px solid #F286A0;
 }
+
+
+
+
+
+
+.botonaudio{
+    margin-left: 10px;
+    top: 10px;
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    opacity: 1;
+    
+}

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 col-sm-offset-3 scoreBoard">
@@ -41,6 +41,35 @@
 			<div class="col-sm-6 col-sm-offset-3" id="gameBoard"></div>
 		</div>
 	</div>
+
+
+	<div class="Musica3raya">
+	
+		<audio src="./musica/neon-gaming.mp3">  
+			Tu navegador no soporta el elemento<code>audio</code>
+		</audio> 
+
+		<button id="botonaudio" class="botonaudio" onclick="cambiodeimagen()"><img src="./imagenes/boton-de-play.png" class="imgsonido" id="imgsonido" alt="silencio" weidth="50px" height="50px"></button>
+
+		<script>
+			var v = document.getElementsByTagName("audio")[0];
+			var sound = false;
+
+			var boton = document.getElementById("botonaudio");
+				boton.addEventListener("click", function(){
+			if (!sound) {
+				v.play();
+				document.getElementById("imgsonido").setAttribute('src', './imagenes/boton-de-play.png');
+				sound = true;
+			} else {
+				v.pause();
+				document.getElementById("imgsonido").setAttribute('src', './imagenes/boton-de-pausa.png');
+				sound = false;
+			}
+			});
+		</script>
+	</div>
+
 
 	<script src="/js/Board.js"></script>
 	<script src="/js/app.js"></script>
