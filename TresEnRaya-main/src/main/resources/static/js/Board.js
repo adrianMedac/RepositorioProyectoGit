@@ -138,6 +138,8 @@ class Board {
 
     doDraw() {
     	alert("Draw!");
+        document.getElementById("draw").removeAttribute("hidden")
+        document.getElementById("reset").removeAttribute("hidden")
         this.lowlightCells();
     }
 
