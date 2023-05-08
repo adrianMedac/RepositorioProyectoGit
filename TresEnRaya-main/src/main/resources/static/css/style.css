@@ -19,24 +19,26 @@
 }
 
 body {
-    background: #A5DAD2;
+    background: #0f1640;
     font-family: Quicksand, san-serif;
 }
 
 .bgWhite {
-    background: #F5F2F5;
+    background: #01fdfe;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .colorWhite {
-    color: #F5F2F5 !important;
+    color: #01fdfe !important;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .bgDark {
-    background: #516D66;
+    background: #01fdfe;
 }
 
 .colorDark {
-    color: #516D66;
+    color: #01fdfe;
 }
 
 .bgRed {
@@ -51,16 +53,28 @@ body {
     font-weight: 400;
 }
 
+.registerName {
+    margin-top: 100px;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .gameBoard {
     width: 100%;
 }
 
 .gameBoard td {
     text-align: center;
-    color: #516D66;
+    color: #fff;
     font-size: 8em;
     cursor: pointer;
     transition: all 0.5s;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    caret-color: transparent;
 }
 
 .gameCell {
@@ -69,7 +83,7 @@ body {
 }
 
 .gameCell:not(.marked):hover {
-    box-shadow: 0 0 42px #555;
+    box-shadow: 0 0 42px #fff;
 }
 
 .gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
@@ -78,8 +92,9 @@ body {
 }
 
 .scoreBoard {
-    color: #516D66;
+    color: #fff;
     height: 100px;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .boardCol {
@@ -93,5 +108,57 @@ body {
 }
 
 .scoreBoard span.active {
-    border-bottom: 4px solid #F286A0;
+    border-bottom: 4px solid #fff;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.scoreBoard1 {
+    margin-left: 60px;
+    display: flex;
+    float: left;
+    border: 1px solid #0f1640;
+}
+
+.scoreBoard2 {
+    margin-right: 60px;
+    text-align: right;
+    border: 1px solid #0f1640;
+}
+
+.text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
+    font-family: Monoton;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon1 {
+    from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00f9,
+        0 0 70px #ff00f9, 0 0 80px #ff00f9, 0 0 100px #ff00f9, 0 0 150px #ff00f9;
+    }
+    to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00f9,
+        0 0 35px #ff00f9, 0 0 40px #ff00f9, 0 0 50px #ff00f9, 0 0 75px #ff00f9;
+    }
+}
+
+@keyframes neon2 {
+    from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #01fdfe,
+        0 0 70px #01fdfe, 0 0 80px #01fdfe, 0 0 100px #01fdfe, 0 0 150px #01fdfe;
+    }
+    to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #01fdfe,
+        0 0 35px #01fdfe, 0 0 40px #01fdfe, 0 0 50px #01fdfe, 0 0 75px #01fdfe;
+    }
 }
