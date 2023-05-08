@@ -8,25 +8,22 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<div class="scoreBoard">
-		<h1>
-			<span id="p1Score"></span>
-		</h1>
+	<div class="scoreBoard scoreBoard1">
+		<h1 class="p1Score" id="p1Score" style="font-size: 60px"></h1>
 	</div>
-	<div class="scoreBoard">
-		<h1 class="">
-			<span id="p2Score"></span>
-		</h1>
+	<div class="scoreBoard scoreBoard2">
+		<h1 class="p2Score" id="p2Score" style="font-size: 60px"></h1>
 	</div>
-	<div class="" id="joinForm">
+	<div id="joinForm">
 		<h1 class="text">TIC TAC TOE</h1>
-					<input class="" id="nickname"
-						autofocus="autofocus" />
-					<span class="input-group-btn">
-						<button class="" id="startBtn">PLAY!</button>
-					</span>
+		<div class="registerName center">
+			<input class="" id="nickname" autofocus="autofocus">
+			<button class="" id="startBtn">PLAY!</button>
+		</div>
 	</div>
-	<div class="" id="gameBoard"></div>
+	<div class="center">
+		<div class="" id="gameBoard"></div>
+	</div>
 
 	<script src="/js/Board.js"></script>
 	<script src="/js/app.js"></script>
