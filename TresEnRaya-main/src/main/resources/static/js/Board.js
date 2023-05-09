@@ -126,19 +126,15 @@ class Board {
     	let looser;
     	if(winner === this.players[0].name){
     		looser = this.players[1].name;
+            playerwinner();
+            
     	} else {
     		looser = this.players[0].name;
+            playerloser();
     	}
-    	
-    	alert(winner+" wins! "+looser+" looses.");
     	
     	this.disableAll();
         this.highlightCells(pos);
-    }
-
-    doDraw() {
-    	alert("Draw!");
-        this.lowlightCells();
     }
 
     highlightScoreboard(playerId) {

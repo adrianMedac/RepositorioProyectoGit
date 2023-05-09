@@ -70,6 +70,7 @@ body {
 
 .gameCell:not(.marked):hover {
     box-shadow: 0 0 42px #555;
+    
 }
 
 .gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
@@ -100,13 +101,94 @@ body {
 
 
 
-
 .botonaudio{
-    margin-left: 10px;
-    top: 10px;
+    margin-left: 96%;
+    top: 92%;
     position: absolute;
-    border-radius: 50%;
     border: none;
     opacity: 1;
-    
+    background-color: #A5DAD2;
 }
+
+
+  .plasticine-item {
+    position: relative;
+    height: 48px;
+    width: var(--input-width);
+  }
+  .plasticine-item span {
+    position: absolute;
+    inset: -3px;
+    border-radius: var(--input-border-radius);
+    background: var(--input-neon-color);
+    filter: blur(10px);
+    transition: 0.5s;
+  }
+  
+  .plasticine-input {
+    position: absolute;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+    outline: none;
+    padding: 1rem;
+    padding-right: 31rem;
+    padding-bottom: 3rem;
+    background: transparent;
+    z-index: 1;
+    background: var(--input-bg-color);
+    transition: 1s;
+
+  }
+  .plasticine-input:focus {
+    border: 1px solid var(--active-color);
+  }
+  .plasticine-input:focus ~ span {
+    inset: 0;
+    filter: blur(0);
+  }
+  
+  .plasticine-label {
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    padding: 0.25rem;
+    color: black;
+    font-size: var(--normal-font-size);
+    transition: 0.5s;
+    cursor: text;
+    z-index: 2;
+  }
+ 
+
+  .plasticine-input:focus + .plasticine-label {
+    top: -0.8rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--active-color);
+    z-index: 10;
+  }
+
+  
+  .plasticine-input:not(:placeholder-shown).plasticine-input:not(:focus)
+    + .plasticine-label {
+    top: -0.8rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--inactive-color);
+    z-index: 10;
+  }
+  :root {
+    --active-color: #1a73e8;  
+    --inactive-color: #80868b; 
+    --normal-font-size: 1.8rem;
+    --small-font-size: 1.5rem;
+    --input-width: 490px;   
+    --input-bg-color: #1e1f2e;
+    --input-border-radius: 1rem;
+    --input-neon-color: #1a73e8;
+  }
+
+  button{
+    margin-top: 100px;
+  }

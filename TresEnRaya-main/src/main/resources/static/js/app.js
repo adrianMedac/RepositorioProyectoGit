@@ -165,4 +165,17 @@ function sendMessage(action, data) {
     socket.send( JSON.stringify(resp) );
 }
 
+
+win = document.getElementById("win");
+loser = document.getElementById("lose");
+
+
+function playerwinner(playerId) {
+	win.play(); 
+}
+function playerloser(playerId) {
+	loser.play(); 
+}
+
+
 start();
