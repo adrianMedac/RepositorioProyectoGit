@@ -29,7 +29,7 @@ body {
 }
 
 .colorWhite {
-    color: #01fdfe ;
+    color: #01fdfe !important;
     animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
@@ -55,7 +55,6 @@ body {
 
 .registerName {
     margin-top: 100px;
-    
 }
 
 .center {
@@ -111,6 +110,7 @@ body {
 .scoreBoard span.active {
     border-bottom: 4px solid #fff;
     animation: neon2 1.5s ease-in-out infinite alternate;
+
 }
 
 .scoreBoard1 {
@@ -188,7 +188,6 @@ body {
     margin-top: 18%;
     border-width: 3px;
     border-style: solid;
-
 }
 
 .fondo{
@@ -215,5 +214,15 @@ body {
     position: absolute;
     margin-bottom: 10%;
     margin-top: 6%;
+}
 
+@keyframes neon2 {
+    from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #01fdfe,
+        0 0 70px #01fdfe, 0 0 80px #01fdfe, 0 0 100px #01fdfe, 0 0 150px #01fdfe;
+    }
+    to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #01fdfe,
+        0 0 35px #01fdfe, 0 0 40px #01fdfe, 0 0 50px #01fdfe, 0 0 75px #01fdfe;
+    }
 }
