@@ -19,24 +19,26 @@
 }
 
 body {
-    background: #A5DAD2;
+    background: #0f1640;
     font-family: Quicksand, san-serif;
 }
 
 .bgWhite {
-    background: #F5F2F5;
+    background: #01fdfe;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .colorWhite {
-    color: #F5F2F5 !important;
+    color: #01fdfe ;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .bgDark {
-    background: #516D66;
+    background: #01fdfe;
 }
 
 .colorDark {
-    color: #516D66;
+    color: #01fdfe;
 }
 
 .bgRed {
@@ -44,11 +46,22 @@ body {
 }
 
 .colorRed {
-    color: #F286A0 !important;
+    color: #F286A0;
 }
 
 .gameBoard, .scoreBoard {
     font-weight: 400;
+}
+
+.registerName {
+    margin-top: 100px;
+    
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .gameBoard {
@@ -57,10 +70,12 @@ body {
 
 .gameBoard td {
     text-align: center;
-    color: #516D66;
+    color: #fff;
     font-size: 8em;
     cursor: pointer;
     transition: all 0.5s;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    caret-color: transparent;
 }
 
 .gameCell {
@@ -69,29 +84,136 @@ body {
 }
 
 .gameCell:not(.marked):hover {
-    box-shadow: 0 0 42px #555;
+    box-shadow: 0 0 42px #fff;
 }
 
 .gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
-    box-shadow: none !important;
+    box-shadow: none;
     cursor: default;
 }
 
 .scoreBoard {
-    color: #516D66;
+    color: #fff;
     height: 100px;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .boardCol {
     width: 5px;
-    cursor: default !important;
+    cursor: default;
 }
 
 .boardRow {
     height: 5px;
-    cursor: default !important;
+    cursor: default;
 }
 
 .scoreBoard span.active {
-    border-bottom: 4px solid #F286A0;
+    border-bottom: 4px solid #fff;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.scoreBoard1 {
+    margin-left: 60px;
+    display: flex;
+    float: left;
+    border: 1px solid #0f1640;
+}
+
+.scoreBoard2 {
+    margin-right: 60px;
+    text-align: right;
+    border: 1px solid #0f1640;
+}
+
+.text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
+    font-family: Monoton;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon1 {
+    from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00f9,
+        0 0 70px #ff00f9, 0 0 80px #ff00f9, 0 0 100px #ff00f9, 0 0 150px #ff00f9;
+    }
+    to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00f9,
+        0 0 35px #ff00f9, 0 0 40px #ff00f9, 0 0 50px #ff00f9, 0 0 75px #ff00f9;
+    }
+}
+
+.draw {
+    padding: 2rem;
+    display: none;
+    gap: 4rem;
+    text-align: center;
+    font-size: 100px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Monoton;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    position: absolute;
+    margin-bottom: 10%;
+    margin-top: 6%;
+    
+}
+
+.button_reset {
+    padding: 1rem;
+    display: none;
+    gap: 4rem;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
+    font-family: Monoton;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    background-color: transparent;
+    border-radius: 2em;
+    position: absolute;
+    margin-top: 18%;
+    border-width: 3px;
+    border-style: solid;
+
+}
+
+.fondo{
+
+    height:100%;
+    width: 100%;
+    display: none;
+    background-color: #0f1640;
+    position: absolute;
+
+}
+
+.ganar{
+
+    padding: 2rem;
+    display: flex;
+    gap: 4rem;
+    text-align: center;
+    font-size: 100px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Monoton;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    position: absolute;
+    margin-bottom: 10%;
+    margin-top: 6%;
+
 }

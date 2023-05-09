@@ -5,46 +5,35 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-3 col-sm-offset-3 scoreBoard">
-				<h1>
-					<span id="p1Score"></span>
-				</h1>
-			</div>
-			<div class="col-sm-3 scoreBoard">
-				<h1 class="text-right">
-					<span id="p2Score"></span>
-				</h1>
-			</div>
+	<div class="scoreBoard scoreBoard1">
+		<h1 class="p1Score" id="p1Score" style="font-size: 60px"></h1>
+	</div>
+	<div class="scoreBoard scoreBoard2">
+		<h1 class="p2Score" id="p2Score" style="font-size: 60px"></h1>
+	</div>
+	<div id="joinForm">
+		<h1 class="text">TIC TAC TOE</h1>
+		<div class="registerName center">
+			<input class="" id="nickname" autofocus="autofocus">
+			<button class="" id="startBtn">PLAY!</button>
 		</div>
-		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3" id="joinForm">
-				<h1 class="text-center colorDark">Enter your name</h1>
-				<div class="panel panel-danger">
-					<div class="panel-body">
-						<div class="input-group">
-							<input class="form-control input-lg" id="nickname"
-								autofocus="autofocus" /><span class="input-group-btn">
-								<button class="btn btn-lg btn-danger" id="startBtn">PLAY!</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-sm-offset-3" id="gameBoard"></div>
-		</div>
+	</div>
+	<div class="center">
+		<div class="fondo" id="fondo" hidden></div>
+		<div class="" id="gameBoard"></div>
+		<div class="ganar" id="ganar"></div>
+		<div class="draw" id="draw" hidden>DRAW!</div>
+		<div class="draw" id="draw" hidden></div>
+		<button class="button_reset" id="reset" onclick="jin()" hidden>Play again</button>
 	</div>
 
 	<script src="/js/Board.js"></script>
 	<script src="/js/app.js"></script>
-
+	
 </body>
 </html>
 
