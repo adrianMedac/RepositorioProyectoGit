@@ -125,6 +125,95 @@ body {
     border: 1px solid #0f1640;
 }
 
+.botonaudio{
+    margin-left: -100px;
+    top: 92%;
+    position: absolute;
+    border: none;
+    opacity: 1;
+    background-color: #1e1f2e;
+}
+
+:root {
+    --active-color: #1a73e8;
+    --inactive-color: #80868b;
+    --border-color: #dadce0;
+    --normal-font-size: 1rem;
+    --small-font-size: 1rem;
+    --input-width: 300px;
+    --input-bg-color: #1e1f2e;
+    --input-border-radius: 0.5rem;
+    --input-neon-color: #1a73e8;
+  }
+
+.plasticine-item {
+  position: relative;
+  height: 48px;
+  width: var(--input-width);
+}
+.plasticine-item span {
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--input-border-radius);
+  background: var(--input-neon-color);
+  filter: blur(10px);
+  transition: 0.1s;
+}
+
+.plasticine-input {
+  position: absolute;
+  inset: 0;
+  width: var(--input-width);
+  font-size: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--input-border-radius);
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+  background: var(--input-bg-color);
+  transition: 0.5s;
+}
+.plasticine-input:focus {
+  border: 1px solid var(--active-color);
+}
+.plasticine-input:focus ~ span {
+  inset: 0;
+  filter: blur(0);
+}
+
+.plasticine-label {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  padding: 0.25rem;
+  background-color: #1e1f2e;
+  color: var(--inactive-color);
+  font-size: 15px;
+  transition: 0.5s;
+  cursor: text;
+  z-index: 2;
+}
+
+
+.plasticine-input:focus + .plasticine-label {
+  top: -0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--active-color);
+  z-index: 10;
+}
+
+
+.plasticine-input:not(:placeholder-shown).plasticine-input:not(:focus)
+  + .plasticine-label {
+  top: -0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--inactive-color);
+  z-index: 10;
+  }
+
 .text {
     padding: 2rem;
     display: flex;
