@@ -9,8 +9,6 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 col-sm-offset-3 scoreBoard">
@@ -26,16 +24,20 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3" id="joinForm">
-				<h1 class="text-center colorDark">Enter your name</h1>
-				<div class="panel panel-danger">
-					<div class="panel-body">
+				<h1 id="hola">TIC TAC TOE</h1>
+				<div>
+					<div>
 						<div class="input-group">
+							
 							<div class="plasticine-item">
-								<input type="text" class="plasticine-input" placeholder=" ">
+								<input type="text" class="plasticine-input form-control input-lg" id="nickname" autofocus="autofocus" placeholder=" ">
 								<label for="" class="plasticine-label">Name</label>
-								<button class="btn btn-lg btn-danger" id="startBtn">PLAY!</button>
 								<span></span>
 							  </div>
+							<span class="input-group-btn">
+							<div id="botonplay"><button class="btn btn-lg btn-danger" id="startBtn">PLAY!</button></div>
+							</span>
+
 						</div>
 					</div>
 				</div>
@@ -43,10 +45,6 @@
 			<div class="col-sm-6 col-sm-offset-3" id="gameBoard"></div>
 		</div>
 	</div>
-
-
-
-
 	<div class="Musica3raya">
 	
 		<audio src="./music/neon-gaming.mp3"	>  
@@ -78,9 +76,8 @@
 	<audio id="win" src="./music/ganar.mp3"></audio>
 	<audio id="lose" src="./music/perder.mp3"></audio>
 
+	
 	<script src="/js/Board.js"></script>
 	<script src="/js/app.js"></script>
-
 </body>
 </html>
-
