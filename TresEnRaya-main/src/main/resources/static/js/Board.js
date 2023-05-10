@@ -198,10 +198,8 @@ class Board {
     }
 }
 
-function jin(){
+function recargar_page(){
 
     location.reload()
-    document.getElementById("draw").style.display="none";
-    document.getElementById("reset").style.display="none";
-    document.getElementById("fondo").style.display="none";
+    setTimeout(document.location.reload(), 100)
 }

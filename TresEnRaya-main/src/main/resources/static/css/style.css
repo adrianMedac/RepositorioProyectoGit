@@ -55,6 +55,7 @@ body {
 
 .registerName {
     margin-top: 100px;
+    margin-left: 50px;
 }
 
 .center {
@@ -126,13 +127,32 @@ body {
     border: 1px solid #0f1640;
 }
 
+.divstart{
+    position: relative;
+    height: 48px;
+    width: var(--input-width);
+}
+
+#startBtn{
+    color: #fff;
+    position: absolute;
+    left: 50px;
+    height: 48px;
+    width: 100px;
+    font-size: 20px;
+    color: black;
+    border: 1px solid black;
+    border-radius: var(--input-border-radius);
+    background: #0f1640;
+}
+
 .botonaudio{
-    margin-left: -100px;
+    left: 95%;
     top: 92%;
     position: absolute;
     border: none;
     opacity: 1;
-    background-color: #1e1f2e;
+    background-color: transparent;
 }
 
 :root {
@@ -163,6 +183,7 @@ body {
 }
 
 .plasticine-input {
+color: #fff;
   position: absolute;
   inset: 0;
   width: var(--input-width);
@@ -191,6 +212,8 @@ body {
   padding: 0.25rem;
   background-color: #1e1f2e;
   color: var(--inactive-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
   font-size: 15px;
   transition: 0.5s;
   cursor: text;
