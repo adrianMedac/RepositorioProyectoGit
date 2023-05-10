@@ -132,11 +132,22 @@ class Board {
     		looser = this.players[0].name;
             playerloser();
     	}
-    	
-    	this.disableAll();
+        const ganar= document.getElementById("ganar")
+        ganar.innerHTML= winner + " HAS WIN!"
+        document.getElementById("reset").style.display="flex";
+        document.getElementById("fondo").style.display="flex";
+    	  this.disableAll();
         this.highlightCells(pos);
+      }
+    doDraw() {
+        
+        document.getElementById("draw").style.display="flex";
+        document.getElementById("reset").style.display="flex";
+        document.getElementById("fondo").style.display="flex";
+        this.disableAll();
+        this.highlightCells(pos);
+    
     }
-
     highlightScoreboard(playerId) {
 
         for (let board of this.scoreBoard) {
@@ -185,4 +196,12 @@ class Board {
             cell.textContent = '';
         }    	
     }
+}
+
+function jin(){
+
+    location.reload()
+    document.getElementById("draw").style.display="none";
+    document.getElementById("reset").style.display="none";
+    document.getElementById("fondo").style.display="none";
 }

@@ -18,7 +18,6 @@ const events = {
     }
 }
 
-
 let container = document.querySelector('#gameBoard');
 let joinForm = document.querySelector('#joinForm');
 
