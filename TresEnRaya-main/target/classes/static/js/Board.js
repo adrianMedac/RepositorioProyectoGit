@@ -201,5 +201,4 @@ class Board {
 function recargar_page(){
 
     location.reload()
-    setTimeout(document.location.reload(), 100)
 }
