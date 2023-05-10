@@ -126,19 +126,19 @@ class Board {
     	let looser;
     	if(winner === this.players[0].name){
     		looser = this.players[1].name;
+            playerwinner();
+            
     	} else {
     		looser = this.players[0].name;
+            playerloser();
     	}
-    	
         const ganar= document.getElementById("ganar")
         ganar.innerHTML= winner + " HAS WIN!"
         document.getElementById("reset").style.display="flex";
         document.getElementById("fondo").style.display="flex";
-    	
-    	this.disableAll();
+    	  this.disableAll();
         this.highlightCells(pos);
-    }
-
+      }
     doDraw() {
         
         document.getElementById("draw").style.display="flex";
@@ -148,7 +148,6 @@ class Board {
         this.highlightCells(pos);
     
     }
-
     highlightScoreboard(playerId) {
 
         for (let board of this.scoreBoard) {
@@ -199,10 +198,7 @@ class Board {
     }
 }
 
-function jin(){
+function recargar_page(){
 
     location.reload()
-    document.getElementById("draw").style.display="none";
-    document.getElementById("reset").style.display="none";
-    document.getElementById("fondo").style.display="none";
 }
